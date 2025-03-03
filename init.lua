@@ -720,6 +720,9 @@ require('lazy').setup({
           end,
         },
       }
+
+      require('lspconfig').clangd.setup { filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto', 'hpp' } }
+      require('lspconfig').gleam.setup {}
     end,
   },
 
@@ -1020,7 +1023,7 @@ require('lazy').setup({
   },
 })
 
-vim.cmd('colorscheme elflord')
+vim.cmd 'colorscheme default'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
